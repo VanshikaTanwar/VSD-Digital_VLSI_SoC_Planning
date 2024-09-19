@@ -129,8 +129,8 @@ Macros
 Digital blocks here are called MACROS.Macros are basically a pure digital logic.As, shown in the figure below:- 
 </p>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/7a92c53f-d03d-45fc-b334-748dfb6151d7.png"></br>
-  <img src="https://github.com/user-attachments/assets/8457b72e-88d0-416d-9d3d-86ff1fc6eb0d.png"></p>br>
+ [//]: <> <img src="https://user-images.githubusercontent.com/7a92c53f-d03d-45fc-b334-748dfb6151d7.png"></br>
+  [//]: <> <img src="https://github.com/user-attachments/assets/8457b72e-88d0-416d-9d3d-86ff1fc6eb0d.png"></p>br>
 
    fig.7: ![macros ss1](https://github.com/user-attachments/assets/8457b72e-88d0-416d-9d3d-86ff1fc6eb0d)
 
