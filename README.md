@@ -129,9 +129,9 @@ Macros
 Digital blocks here are called MACROS.Macros are basically a pure digital logic.As, shown in the figure below:- 
 </p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d8b7d898-5a5d-44de-b6a5-b2ce600674c0.png"></br>
+  <img src="https://github.com/user-attachments/assets/7a92c53f-d03d-45fc-b334-748dfb6151d7.png"></br>
 
-   fig.6: 
+   fig.7: 
 </p>
 
 
@@ -140,21 +140,21 @@ Digital blocks here are called MACROS.Macros are basically a pure digital logic.
 </p>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/90523478/215344432-6bbbddcb-1bcb-4587-babd-9d3cccd248df.png"></br>
-   fig.7: 
-</p>
-
-
-</p>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/90523478/215344481-18fb4d53-2f78-479c-9996-ca91585c71b1.png"></br>
    fig.8: 
 </p>
 
 
 </p>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/90523478/215344507-1f98e2a6-71ac-42ca-ac52-3c482bb5b090.png"></br>
+  <img src="https://user-images.githubusercontent.com/90523478/215344481-18fb4d53-2f78-479c-9996-ca91585c71b1.png"></br>
    fig.9: 
+</p>
+
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215344507-1f98e2a6-71ac-42ca-ac52-3c482bb5b090.png"></br>
+   fig.10: 
 </p>
 
 # Openlane
@@ -162,7 +162,7 @@ Digital blocks here are called MACROS.Macros are basically a pure digital logic.
 </p>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/90523478/215344549-8040b71c-7584-4bf2-af4a-00145baef992.png"></br>
-   fig.10: 
+   fig.11: 
 </p>
 
 The main goal of using openlane is “To produce a clean GDSII with no human intervention (no-human-in-the-loop)
