@@ -126,7 +126,14 @@ The word foundry means in terms of chip designing is factory .
 It is a type of factory which consist of some machines and it is that place our chips actually got manufactured or fabricated .And IP here means is intellectual property .It is something which has some intelligence means an organization has made it with some unique intelligence which is new in market ,or which is latest which is updated , as others cannot have the right to copy it if anyone try to copy then copyright issue will be created to that person.
 
 Macros 
-Digital blocks here are called MACROS.Macros are basically a pure digital logic.
+Digital blocks here are called MACROS.Macros are basically a pure digital logic.As, shown in the figure below:- 
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d8b7d898-5a5d-44de-b6a5-b2ce600674c0.png"></br>
+
+   fig.6: 
+</p>
+
 
 # Open Source Digital ASIC Design
 
