@@ -135,6 +135,34 @@ Digital blocks here are called MACROS.Macros are basically a pure digital logic.
 
 </p>
 
+# ISA (Instruction Set Architecture)
+
+A C program must follow a precise flow when it is executed on a particular hardware layout, such as the inside of a chip in your laptop.
+The assembly language program for this specific C application is first compiled using RISC-V ISA (Reduced Instruction Set Compting - V Intruction Set Architecture).
+After that, the machine language program—which is the binary language of 0 and 1 that the computer hardware understands—is created from the assembly language program.
+
+After that, we have to use an RTL (a Hardware Description Language) to implement this RISC-V specification. Lastly, there is a typical PnR or RTL to GDSII flow from the RTL to Layout.
+
+</p>
+<p align="center">
+
+  ![ISA1](https://github.com/user-attachments/assets/f7b8cf73-c597-4912-8afa-9f1224cb1ff1)
+
+
+   fig.7: 
+
+</p>
+
+
+
+
+
+1. The execution of application software on hardware involves several critical processes. Initially, the application enters a segment known as system software, which translates the application program into binary code. System software comprises multiple layers, with the primary components being the Operating System (OS), Compiler, and Assembler.
+
+2. The OS first generates small functions in programming languages such as C, C++, Visual Basic, or Java. These functions are then processed by the corresponding compiler, which translates them into instructions. The syntax of these instructions is dependent on the hardware architecture of the system in use.
+
+3. Subsequently, the assembler's role is to convert these instructions into their binary representation, commonly referred to as a machine language program. Ultimately, this binary code is supplied to the hardware, enabling it to comprehend and execute the specific functions dictated by the received binary instructions.
+
 
 # Open Source Digital ASIC Design
 
