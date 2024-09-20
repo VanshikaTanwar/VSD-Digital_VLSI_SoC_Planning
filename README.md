@@ -15,43 +15,6 @@ NASSCOM DIGITAL SOC PROGRAM
 
 
 
-## OpenLane 
-
-OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault and custom methodology scripts for design exploration and optimization.
-For more information check [here](https://openlane.readthedocs.io/)
-
-![openlane flow 1](https://user-images.githubusercontent.com/80625515/130246106-18f73ccc-e8e1-4061-a1b0-8c14bdf711f1.png)
-
-### OpenLane design stages
-
-1. Synthesis
-	- `yosys` - Performs RTL synthesis
-	- `abc` - Performs technology mapping
-	- `OpenSTA` - Performs static timing analysis on the resulting netlist to generate timing reports
-2. Floorplan and PDN
-	- `init_fp` - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
-	- `ioplacer` - Places the macro input and output ports
-	- `pdn` - Generates the power distribution network
-	- `tapcell` - Inserts welltap and decap cells in the floorplan
-3. Placement
-	- `RePLace` - Performs global placement
-	- `Resizer` - Performs optional optimizations on the design
-	- `OpenDP` - Perfroms detailed placement to legalize the globally placed components
-4. CTS
-	- `TritonCTS` - Synthesizes the clock distribution network (the clock tree)
-5. Routing
-	- `FastRoute` - Performs global routing to generate a guide file for the detailed router
-	- `CU-GR` - Another option for performing global routing.
-	- `TritonRoute` - Performs detailed routing
-	- `SPEF-Extractor` - Performs SPEF extraction
-6. GDSII Generation
-	- `Magic` - Streams out the final GDSII layout file from the routed def
-	- `Klayout` - Streams out the final GDSII layout file from the routed def as a back-up
-7. Checks
-	- `Magic` - Performs DRC Checks & Antenna Checks
-	- `Klayout` - Performs DRC Checks
-	- `Netgen` - Performs LVS Checks
-	- `CVC` - Performs Circuit Validity Checks
 
 # Introduction
 </p>
@@ -241,8 +204,24 @@ Here, clean means:-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/90523478/215968264-df6f628b-14c9-41db-9539-0eb7d2cb63b5.PNG"></br>
    fig.11: 
+
+
+
+
+## DAY 1
+   
 </p>
 
-OpenLane are based on several OpenSource Projects:-
+OpenLane are based on several OpenSource Projects:
+
 
 OpenROAD, Magic VLSI Layout Tool, Fault,Yosys,Qflow, KLayout,etc.
+
+
+</p>
+<p align="center">
+-![openlane ss2](https://github.com/user-attachments/assets/2a649a1f-a952-46ec-8ab8-846e48d36342)
+
+![openlane sss1](https://github.com/user-attachments/assets/669035ac-251f-4a10-849a-0474d72fd21c)
+</p>
+<p align="center">
