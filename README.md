@@ -163,6 +163,29 @@ After that, we have to use an RTL (a Hardware Description Language) to implement
 
 3. Subsequently, the assembler's role is to convert these instructions into their binary representation, commonly referred to as a machine language program. Ultimately, this binary code is supplied to the hardware, enabling it to comprehend and execute the specific functions dictated by the received binary instructions.
 
+</p>
+<p align="center">
+
+  
+
+![system software ss1](https://github.com/user-attachments/assets/a6055454-b7fe-4bfe-8b64-1f1c0579455a)
+
+   fig.7: 
+
+</p>
+
+Let us take an example , Consider there is a stopwatch application running on a RISC-V core. The operating system's output may consist of a concise C function that is processed by the compiler, resulting in RISC-V instructions. Subsequently, the assembler generates binary code, which is then integrated into the chip layout.
+
+The input and output of the compiler and assembler for the aforementioned stopwatch are as follows.
+
+</p>
+<p align="center">
+
+
+![stopwatch ss](https://github.com/user-attachments/assets/aec8acce-5ba7-4851-814d-f9f8e40c7fa3)
+
+
+</p>
 
 # Open Source Digital ASIC Design
 
