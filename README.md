@@ -218,6 +218,11 @@ OpenLane are based on several OpenSource Projects:
 OpenROAD, Magic VLSI Layout Tool, Fault,Yosys,Qflow, KLayout,etc.
 
 ## DAY 1
+
+As, in my ubuntu setup , vsdflow and kther tools are laready installed so, i have put its screenshots ....
+as, i have done some old trainings ....thats why its already installed on my ubuntu setup.
+
+
 </p>
 <p align="center">
 
