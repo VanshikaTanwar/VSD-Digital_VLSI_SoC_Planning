@@ -208,7 +208,7 @@ Here, clean means:-
 
 
 
-## DAY 1
+
    
 </p>
 
@@ -217,11 +217,16 @@ OpenLane are based on several OpenSource Projects:
 
 OpenROAD, Magic VLSI Layout Tool, Fault,Yosys,Qflow, KLayout,etc.
 
-
+## DAY 1
 </p>
 <p align="center">
--![openlane ss2](https://github.com/user-attachments/assets/2a649a1f-a952-46ec-8ab8-846e48d36342)
+
 
 ![openlane sss1](https://github.com/user-attachments/assets/669035ac-251f-4a10-849a-0474d72fd21c)
 </p>
+
+
 <p align="center">
+-![openlane ss2](https://github.com/user-attachments/assets/2a649a1f-a952-46ec-8ab8-846e48d36342)
+
+</p>
