@@ -241,4 +241,91 @@ Checking all the respective tools inside Openlane
 
 ![image](https://github.com/user-attachments/assets/9490c16d-f8c6-49e2-bffe-168d56888f79)
 
+cd designs 
+ls -ltr
+![image](https://github.com/user-attachments/assets/e4d4cbec-af3e-4de1-850f-c61c2de95356)
+
+cd picorv32a 
+
+![image](https://github.com/user-attachments/assets/fb685f57-9474-4cc7-9f18-ab29863f7504)
+
+ls-ltr
+![image](https://github.com/user-attachments/assets/a9829a2b-fc67-4f6e-9d4e-5a42c2861ddc)
+
+
+# Task 1
+To calculate the Flop Ratio 
+
+- For Calculating the Flop Ratio ,with reference of number of D flip flops to number of cells , the following formula has been used 
+```math
+Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}
+```
+```math
+Percentage\ of\ DFF's = Flop\ Ratio * 100
+```
+
+1) How to open the Openlane Tool 
+
+a) First of all, open the terminal and change the directory to openlane where , openlane exists 
+
+`cd Desktop/work/tools/openlane_working_dir/openlane`
+
+b) Invoke the OpenLANE flow docker sub-system by running below command
+
+ `docker`
+
+c) After accessing the OpenLANE flow contained docker sub-system, we are able to initiate the OpenLANE flow in the Interactive mode by using the command below:
+
+`./flow.tcl -interactive`
+
+d) When the openlane opens, now , we need to enter the required packages for the proper functionality of openlane flow 
+
+`package require openlane 0.9`
+
+e) Now, our openlane flow is ready with package 0.9 , In order to execute any design, we need to start by preparing the design, which involves creating essential files and directories to run a particular design, as in our case it is 'picorv32a.' design
+This step is performed for setting up the files for preparing the respective design 
+
+`prep -design picorv32a`
+
+Note:- For cross checking and verifying that our design is prepared or not, finally, check that after completion of above command it will show "preapration completion " or Check the creation of file ,so a run folder is created within picorv32a
+
+Since, today’s date is 24th September 2024 so a folder created is titled as “23-09_20-24” within the picorv32a Directory.
+
+f) Now, our design is prepared and ready , we can proceed for running the synthesis now , by running the following command which is given below:-
+as, all the LEF's have been merged in the design , so, we are proceeding for synthesis process now..
+
+`run_synthesis`
+
+
+
+
+
+
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/57332469-ed7c-411e-8fd5-52b779db6a9c)
+
+![image](https://github.com/user-attachments/assets/ad1aff13-6d94-47da-a9ec-5345d7452353)
+
+Note:- For confirming that our design is prepped and ready or not
+![image](https://github.com/user-attachments/assets/cc1fc29a-feb6-4e1d-ab03-c7500c4e8570)
+
+also, check that a run folder has been created inside picorv32a folder 
+![image](https://github.com/user-attachments/assets/8090fc3d-f2c4-4361-a056-951f398a1ac3)
+this folder is created inside picorv32a/runs with todays date i.e., 24th September 2024 so ,a folder created is titled as “23-09_20-24” 
+![image](https://github.com/user-attachments/assets/ba085089-cd66-4b37-ad9e-127c317c1dc0)
+
+
+
+
+ 
+
+
+
+
+
 
