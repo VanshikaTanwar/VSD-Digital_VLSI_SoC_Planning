@@ -14,7 +14,12 @@ NASSCOM DIGITAL SOC PROGRAM
 
 
 
+### Theory
 
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
 
 # Introduction
 </p>
@@ -216,6 +221,8 @@ OpenLane are based on several OpenSource Projects:
 
 
 OpenROAD, Magic VLSI Layout Tool, Fault,Yosys,Qflow, KLayout,etc.
+
+</details>
 
 ## DAY 1
 
