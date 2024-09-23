@@ -285,6 +285,7 @@ d) When the openlane opens, now , we need to enter the required packages for the
 e) Now, our openlane flow is ready with package 0.9 , In order to execute any design, we need to start by preparing the design, which involves creating essential files and directories to run a particular design, as in our case it is 'picorv32a.' design
 This step is performed for setting up the files for preparing the respective design 
 
+
 `prep -design picorv32a`
 
 Note:- For cross checking and verifying that our design is prepared or not, finally, check that after completion of above command it will show "preapration completion " or Check the creation of file ,so a run folder is created within picorv32a
@@ -296,6 +297,8 @@ as, all the LEF's have been merged in the design , so, we are proceeding for syn
 
 `run_synthesis`
 
+this synthesis command will run for sometime , approximately 2-5 mins , we need to wait 
+when it becomes successful check for the "Number of Cells", Number of D flip Flop " and "The chip area for the module - picorv32a "
 
 
 
@@ -305,18 +308,53 @@ as, all the LEF's have been merged in the design , so, we are proceeding for syn
 
 
 
+# Screenshots of running every command mentioned above 
 
 
 ![image](https://github.com/user-attachments/assets/57332469-ed7c-411e-8fd5-52b779db6a9c)
 
 ![image](https://github.com/user-attachments/assets/ad1aff13-6d94-47da-a9ec-5345d7452353)
 
-Note:- For confirming that our design is prepped and ready or not
+![image](https://github.com/user-attachments/assets/edf3b703-4a5b-48af-aea0-0c7cee10b3c4)
+
+Number of Cells :- 14876
+![image](https://github.com/user-attachments/assets/60ba3a53-8a5d-4a01-bd1b-70fbd674724d)
+
+Number of D Flip-Flop :- 1613
+![image](https://github.com/user-attachments/assets/3d5f7799-5768-48ec-9f38-04d2e41b07ad)
+
+The Chip Area for the Module - PICORV32a
+![image](https://github.com/user-attachments/assets/f39535a6-8d19-46c0-8687-7aeecd82377b)
+
+![image](https://github.com/user-attachments/assets/d2993dbb-09bf-40f8-b694-98d5a3607c47)
+
+2) Calculation of Flop Ratio and Percentage of D Flip-Flop from synthesis statistics report 
+
+To see synthesis report go to this directory work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/23-09_20-24/reports/synthesis/1-yosys_4.stat.rpt
+
+![image](https://github.com/user-attachments/assets/ea40a957-2232-4f7a-b90e-92d555778575)
+
+
+```math
+Flop\ Ratio = \frac{1613}{14876} = 0.108429685
+```
+```math
+Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
+```
+
+
+
+
+*Note:- For confirming that our design is prepped and ready or not after performing steps (e)* 
+
 ![image](https://github.com/user-attachments/assets/cc1fc29a-feb6-4e1d-ab03-c7500c4e8570)
 
 also, check that a run folder has been created inside picorv32a folder 
+
 ![image](https://github.com/user-attachments/assets/8090fc3d-f2c4-4361-a056-951f398a1ac3)
+
 this folder is created inside picorv32a/runs with todays date i.e., 24th September 2024 so ,a folder created is titled as “23-09_20-24” 
+
 ![image](https://github.com/user-attachments/assets/ba085089-cd66-4b37-ad9e-127c317c1dc0)
 
 
