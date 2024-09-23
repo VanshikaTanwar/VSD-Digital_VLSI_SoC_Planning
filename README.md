@@ -345,7 +345,9 @@ Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 
 
 
-*Note:- For confirming that our design is prepped and ready or not after performing steps (e)* 
+
+
+### *Note:- For confirming that our design is prepped and ready or not after performing steps (e)* 
 
 ![image](https://github.com/user-attachments/assets/cc1fc29a-feb6-4e1d-ab03-c7500c4e8570)
 
