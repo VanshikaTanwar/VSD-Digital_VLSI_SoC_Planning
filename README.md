@@ -352,7 +352,12 @@ Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 
 
 
+### Note
 
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
 
 ### *Note:- For confirming that our design is prepped and ready or not after performing steps (e)* 
 
@@ -368,7 +373,7 @@ this folder is created inside picorv32a/runs with todays date i.e., 24th Septemb
 
 
 
-
+</details>
  
 
 
