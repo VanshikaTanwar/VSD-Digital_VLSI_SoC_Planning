@@ -224,7 +224,7 @@ OpenROAD, Magic VLSI Layout Tool, Fault,Yosys,Qflow, KLayout,etc.
 
 </details>
 
-## DAY 1
+# DAY 1 ( Inception of Opensource EDA , OpenLANE and SKY130 PDK )
 
 As, in my ubuntu setup , vsdflow and other tools are already installed so, i have put its screenshots ....
 as, I have done some old trainings ....thats why its already installed on my ubuntu setup.
@@ -260,9 +260,10 @@ ls-ltr
 ![image](https://github.com/user-attachments/assets/a9829a2b-fc67-4f6e-9d4e-5a42c2861ddc)
 
 
-# Task 1 
+## Task 1 
 
 (1) To Run 'picorv32a' design synthesis using OpenLANE flow and generate the respective outputs.
+
 (2) To calculate the Flop Ratio 
 
 - For Calculating the Flop Ratio ,with reference of number of D flip flops to number of cells , the following formula has been used 
@@ -273,7 +274,7 @@ Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}
 Percentage\ of\ DFF's = Flop\ Ratio * 100
 ```
 
-1) How to open the Openlane Tool 
+- How to open the Openlane Tool 
 
 a) First of all, open the terminal and change the directory to openlane where , openlane exists 
 
@@ -355,6 +356,9 @@ Flop\ Ratio = \frac{1613}{14876} = 0.108429685
 Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 ```
 
+## File View of Synthesis Result 
+
+![image](https://github.com/user-attachments/assets/46c06fe7-cbe5-4ee4-85c7-2ab2698bcb6c)
 
 
 
@@ -382,7 +386,32 @@ this folder is created inside picorv32a/runs with todays date i.e., 24th Septemb
 </details>
  
 
+# DAY 2 ( Good Floorplan vs Bad Floorplan and Introduction to Library Cells )
 
+
+### Theory
+
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
+
+</details>
+
+
+## Task 2
+
+Section 2 tasks:- 
+1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
+2. Calculate the die area in microns from the values in floorplan def.
+3. Load generated floorplan def in magic tool and explore the floorplan.
+4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
+5. Load generated placement def in magic tool and explore the placement.
+
+```math
+Area\ of\ die\ in\ microns = Die\ width\ in\ microns * Die\ height\ in\ microns
+```
+  
 
 
 
