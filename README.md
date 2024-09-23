@@ -219,20 +219,20 @@ OpenROAD, Magic VLSI Layout Tool, Fault,Yosys,Qflow, KLayout,etc.
 
 ## DAY 1
 
-As, in my ubuntu setup , vsdflow and kther tools are laready installed so, i have put its screenshots ....
-as, i have done some old trainings ....thats why its already installed on my ubuntu setup.
+As, in my ubuntu setup , vsdflow and other tools are already installed so, i have put its screenshots ....
+as, I have done some old trainings ....thats why its already installed on my ubuntu setup.
 
 
 </p>
 <p align="center">
 
 
-![openlane sss1](https://github.com/user-attachments/assets/669035ac-251f-4a10-849a-0474d72fd21c)
+
 </p>
 
 
 <p align="center">
--![openlane ss2](https://github.com/user-attachments/assets/2a649a1f-a952-46ec-8ab8-846e48d36342)
+
 
 </p>
 
