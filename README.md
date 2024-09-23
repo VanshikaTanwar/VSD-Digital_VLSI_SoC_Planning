@@ -307,9 +307,13 @@ as, all the LEF's have been merged in the design , so, we are proceeding for syn
 this synthesis command will run for sometime , approximately 2-5 mins , we need to wait 
 when it becomes successful check for the "Number of Cells", Number of D flip Flop " and "The chip area for the module - picorv32a "
 
+g) To exit from openlane flow 
 
+`exit`
 
+h) To exit from openlane flow docker sub-system , run this command :-
 
+`exit`
 
 
 
