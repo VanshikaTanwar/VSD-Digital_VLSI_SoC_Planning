@@ -413,6 +413,40 @@ Area\ of\ die\ in\ microns = Die\ width\ in\ microns * Die\ height\ in\ microns
 ```
   
 
+1. To run the Floorplan of "picorv32a" design using Openlane
+
+`run_floorplan`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Screenshots of running every command mentioned above 
+
+
+![image](https://github.com/user-attachments/assets/ad11d158-bd3a-4972-bf67-43b9ed7363b9)
+
+![image](https://github.com/user-attachments/assets/fffb43be-2e06-4deb-be41-300ee6498a0f)
+
+
+
 
 
 
