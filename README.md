@@ -260,8 +260,10 @@ ls-ltr
 ![image](https://github.com/user-attachments/assets/a9829a2b-fc67-4f6e-9d4e-5a42c2861ddc)
 
 
-# Task 1
-To calculate the Flop Ratio 
+# Task 1 
+
+(1) To Run 'picorv32a' design synthesis using OpenLANE flow and generate the respective outputs.
+(2) To calculate the Flop Ratio 
 
 - For Calculating the Flop Ratio ,with reference of number of D flip flops to number of cells , the following formula has been used 
 ```math
@@ -275,7 +277,7 @@ Percentage\ of\ DFF's = Flop\ Ratio * 100
 
 a) First of all, open the terminal and change the directory to openlane where , openlane exists 
 
-`cd Desktop/work/tools/openlane_working_dir/openlane`
+```cd Desktop/work/tools/openlane_working_dir/openlane```
 
 b) Invoke the OpenLANE flow docker sub-system by running below command
 
