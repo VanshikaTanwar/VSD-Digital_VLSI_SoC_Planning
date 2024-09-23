@@ -235,3 +235,10 @@ as, i have done some old trainings ....thats why its already installed on my ubu
 -![openlane ss2](https://github.com/user-attachments/assets/2a649a1f-a952-46ec-8ab8-846e48d36342)
 
 </p>
+
+
+Checking all the respective tools inside Openlane 
+
+![image](https://github.com/user-attachments/assets/9490c16d-f8c6-49e2-bffe-168d56888f79)
+
+
