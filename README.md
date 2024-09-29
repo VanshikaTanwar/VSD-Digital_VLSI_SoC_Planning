@@ -472,7 +472,7 @@ Then, for CTS , Routing, etc. everything is given in this readme.md
 
 </details>
 
-2. ### To calculate the Die area in microns from the values which are given in floorplan.def file
+ ### 2. To calculate the Die area in microns from the values which are given in floorplan.def file
 
 Conetnt of floorplan.def is given below :-
 
@@ -504,6 +504,22 @@ Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
 ```
 
 
+
+### 3. Load generated floorplan def in magic tool and explore the floorplan.
+
+Commands to load floorplan def in magic in another terminal
+
+```bash
+# Change directory to path containing generated floorplan def
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
+
+# Command to load the floorplan def in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+
+Screenshots of floorplan def in magic
+
+![image](https://github.com/user-attachments/assets/1aebe463-ab4f-40c6-9ad3-cbb150c31036)
 
 
 
