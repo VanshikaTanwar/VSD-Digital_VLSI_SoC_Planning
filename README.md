@@ -403,7 +403,7 @@ Expand or Collapse
 
 Section 2 tasks:- 
 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
-2. Calculate the die area in microns from the values in floorplan def.
+2. Calculate the die area in microns from the values which are given in floorplan def file.
 3. Load generated floorplan def in magic tool and explore the floorplan.
 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
 5. Load generated placement def in magic tool and explore the placement.
@@ -444,6 +444,77 @@ Area\ of\ die\ in\ microns = Die\ width\ in\ microns * Die\ height\ in\ microns
 ![image](https://github.com/user-attachments/assets/ad11d158-bd3a-4972-bf67-43b9ed7363b9)
 
 ![image](https://github.com/user-attachments/assets/fffb43be-2e06-4deb-be41-300ee6498a0f)
+
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
+
+
+Now, to check which library are used in synthesis, what is maximum fanout, what files are there in floorplan etc.
+Just go to this directory :- `cd Desktop/work/tools/openlane_working_dir/openlane/configurations` and run the given command as shown in image below:-  
+![image](https://github.com/user-attachments/assets/e346acad-6dc8-4fbe-8e6d-d0bbd66e395f)
+
+
+This s given for Synthesis , 
+![image](https://github.com/user-attachments/assets/6c29dde0-22b8-4032-8d74-a0b2178ac242)
+
+For Floorplan , what all files are there inside it ,for example:- core util, aspect ratio, etc.  it is listed below:- 
+
+![image](https://github.com/user-attachments/assets/59ccc78f-a754-4900-8fe6-1e1f57cbeb9e)
+
+then, for placement, 
+![image](https://github.com/user-attachments/assets/edba9518-2234-435a-9727-da1455138a8c)
+
+Then, for CTS , Routing, etc. everything is given in this readme.md
+
+![image](https://github.com/user-attachments/assets/125f2cdf-586c-461b-9123-848b9a016285)
+
+</details>
+
+2. ### To calculate the Die area in microns from the values which are given in floorplan.def file
+
+Conetnt of floorplan.def is given below :-
+
+`cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/23-09_20-24/results/floorplan/picorv32a.floorplan.def `
+
+![image](https://github.com/user-attachments/assets/58e0b01d-408d-44f6-b7a8-bca1a51276c2)
+
+According to floorplan def
+```math
+1000\ Unit\ Distance = 1\ Micron
+1\Micron = 1000\ Unit\ Distance
+```
+```math
+Die\ width\ in\ unit\ distance = 660685 - 0 = 660685
+```
+```math
+Die\ height\ in\ unit\ distance = 671405 - 0 = 671405
+```
+```math
+Distance\ in\ microns = \frac{Value\ in\ Unit\ Distance}{1000}
+```
+```math
+Die\ width\ in\ microns = \frac{660685}{1000} = 660.685\ Microns
+```
+```math
+Die\ height\ in\ microns = \frac{671405}{1000} = 671.405\ Microns
+```
+```math
+Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
