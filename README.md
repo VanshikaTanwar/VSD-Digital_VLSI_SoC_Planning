@@ -482,7 +482,6 @@ Conetnt of floorplan.def is given below :-
 
 According to floorplan def
 ```math
-1000\ Unit\ Distance = 1\ Micron
 1\Micron = 1000\ Unit\ Distance
 ```
 ```math
