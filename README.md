@@ -519,7 +519,46 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 Screenshots of floorplan def in magic
 
-![image](https://github.com/user-attachments/assets/1aebe463-ab4f-40c6-9ad3-cbb150c31036)
+![image](https://github.com/user-attachments/assets/a9f79e54-ee6a-43ef-bc35-cffcc029d1aa)
+
+This is the Floorplan Layout in Magic which is shown above as well as below 
+
+![image](https://github.com/user-attachments/assets/f47233bb-822e-4dd4-93fc-15e49b0821e9)
+
+--> Equidistant Placement of Ports
+
+![image](https://github.com/user-attachments/assets/bfb0ba6f-85fc-4ee0-89e7-1686227937d9)
+
+![image](https://github.com/user-attachments/assets/8754e263-2127-4fd6-8cff-041b85540925)
+
+
+--> Select any cell and then in tkcon window , enter the command "what" to display the respective cell details  
+
+![image](https://github.com/user-attachments/assets/9e13d9a3-5446-4343-9d09-90c4d651d6ed)
+
+--> Port Layer as set through config.tcl 
+
+![image](https://github.com/user-attachments/assets/810a2add-d8b3-41b6-a102-a9e849d42862)
+
+
+![image](https://github.com/user-attachments/assets/ea04ddcc-37d3-45e8-bad6-ea96494816f1)
+
+
+--> Decap cells and Tap Cells 
+
+![image](https://github.com/user-attachments/assets/bd8eefe1-8b58-4c9a-8b3d-1fdcaa30002c)
+
+--> Diagonally Equidistant Tap Cells
+
+![image](https://github.com/user-attachments/assets/14753a7a-3131-46b8-b8c0-33540636025c)
+
+
+
+
+
+
+
+
 
 
 
