@@ -752,6 +752,35 @@ It will find inside the given path ,
 
 Measuring unit distance in layout grid
 
+![image](https://github.com/user-attachments/assets/39e1693b-16ed-4a23-9c49-0d713b2872a2)
+
+Now, edit the Spice File of Sky130 Inverter for ngspice simulation 
+
+![image](https://github.com/user-attachments/assets/b0515a2a-efc3-41a4-b238-3441e708c8bf)
+
+![image](https://github.com/user-attachments/assets/ca3aa6b0-c39c-4490-9843-0d0ce1402d63)
+
+
+#### 5. Post-layout ngspice simulations.
+
+Commands for ngspice simulation
+
+```bash
+# Command to directly load spice file for simulation to ngspice
+ngspice sky130_inv.spice
+
+# Now that we have entered ngspice with the simulation spice file loaded we just have to load the plot
+plot y vs time a
+```
+
+Screenshots of ngspice run
+
+![Screenshot from 2024-03-19 14-56-42](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c023ebb0-756f-4707-ae82-a28746f372da)
+![Screenshot from 2024-03-19 14-57-22](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/addefe5e-6a9a-44f2-943a-4a9373ddc56c)
+
+Screenshot of generated plot
+
+
 
 
 
