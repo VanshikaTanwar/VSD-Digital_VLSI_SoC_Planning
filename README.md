@@ -455,7 +455,9 @@ Before running the floorplan change the `VMetal` and `HMetal` Layers as in openl
 In the above image , Left:- config.tcl, inside picorv32a has been modified 
                      Right:- Floorplan.tcl in openlane configuration 
 
-<details>
+</details>
+
+
 
 ![image](https://github.com/user-attachments/assets/ad11d158-bd3a-4972-bf67-43b9ed7363b9)
 
