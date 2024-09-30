@@ -571,6 +571,82 @@ This is the Floorplan Layout in Magic which is shown above as well as below
 ![image](https://github.com/user-attachments/assets/14753a7a-3131-46b8-b8c0-33540636025c)
 
 
+#### 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
+
+Command to run placement
+
+```tcl
+# Congestion aware placement by default
+run_placement
+```
+
+Screenshots of placement run
+
+![image](https://github.com/user-attachments/assets/b04cbd48-80ce-4de1-87a6-fb019b29fd7b)
+
+
+![image](https://github.com/user-attachments/assets/d37992d0-5cbf-42ed-be7d-96fcfa3bafa6)
+
+#### 5. Load generated placement def in magic tool and explore the placement.
+
+
+Commands to load placement def in magic in another terminal
+
+```bash
+# Change directory to path containing generated placement def
+cd /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/23-09_20-24/results/placement/
+
+# Command to load the placement def in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+
+Screenshots of placement def in magic
+
+![image](https://github.com/user-attachments/assets/5db5cf82-b184-499e-a438-43ae35978229)
+
+
+![image](https://github.com/user-attachments/assets/2443a890-78a1-4bdc-a1b6-ade063c1e872)
+
+--> All Standard Cells are legally Placed 
+
+![image](https://github.com/user-attachments/assets/6c91e1af-423c-4196-934d-30dfdaa75bfe)
+
+
+Commands to exit from current run
+
+```tcl
+# Exit from OpenLANE flow
+exit
+
+# Exit from OpenLANE flow docker sub-system
+exit
+```
+
+
+## Task 3 - Design library cell using Magic Layout and ngspice characterization
+Inverrter Characterization using SKY130 Model File 
+
+
+
+### Theory
+
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
+
+</details>
+
+
+Section 3 Tasks :- 
+1. Clone custom inverter standard cell design from github repository: [Standard cell design and characterization using OpenLANE flow](https://github.com/nickson-jose/vsdstdcelldesign).
+2. Load the custom inverter layout in magic and explore.
+3. Spice extraction of inverter in magic.
+4. Editing the spice model file for analysis through simulation.
+5. Post-layout ngspice simulations.
+6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+
+
 
 
 
