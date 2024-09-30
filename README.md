@@ -441,6 +441,22 @@ Area\ of\ die\ in\ microns = Die\ width\ in\ microns * Die\ height\ in\ microns
 # Screenshots of running every command mentioned above 
 
 
+#### Note :-
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
+
+Before running the floorplan change the `VMetal` and `HMetal` Layers as in openlane "Layer number are 1 less than the actual layer "
+
+
+![image](https://github.com/user-attachments/assets/fd467835-07b4-46a5-bb67-403845b3a091)
+
+In the above image , Left:- config.tcl, inside picorv32a has been modified 
+                     Right:- Floorplan.tcl in openlane configuration 
+
+<details>
+
 ![image](https://github.com/user-attachments/assets/ad11d158-bd3a-4972-bf67-43b9ed7363b9)
 
 ![image](https://github.com/user-attachments/assets/fffb43be-2e06-4deb-be41-300ee6498a0f)
