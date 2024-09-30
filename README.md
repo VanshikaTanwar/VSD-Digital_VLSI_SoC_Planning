@@ -649,6 +649,101 @@ Section 3 Tasks :-
 
 
 
+#### 1. Clone custom inverter standard cell design from github repository
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Clone the repository with custom inverter design
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+# Change into repository directory
+cd vsdstdcelldesign
+
+# Copy magic tech file to the repo directory for easy access
+cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
+
+# Check contents whether everything is present
+ls
+
+# Command to open custom inverter layout in magic
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+Screenshot of commands run
+
+
+![image](https://github.com/user-attachments/assets/1019f605-ba8f-49d2-84b1-f1d03fe469e8)
+
+
+#### 2. Load the custom inverter layout in magic and explore.
+
+--> Screenshot of custom inverter layout in magic
+
+![image](https://github.com/user-attachments/assets/b2ad6761-065e-4cc9-833c-b1e0d7df5ec2)
+
+--> PMOS and NMOS are identified in this inverter layout 
+
+![image](https://github.com/user-attachments/assets/c6960a32-17b6-4ff4-a3e9-fdc4ea83aa72)
+
+![image](https://github.com/user-attachments/assets/e3002c08-32e2-437b-9ee2-f9119cd0b409)
+
+--> Input A connected with PMOS and NMOS 
+
+![image](https://github.com/user-attachments/assets/7f7c864e-7f77-4820-857d-ee47a1649f06)
+
+--> Connectivity of Output Y with PMOS and NMOS drain is verified
+
+![image](https://github.com/user-attachments/assets/e0e7b76f-6a01-4d03-9e73-8b724b36ca2b)
+
+--> Source Connectivity of PMOS with VDD (here, it is VPWR) verified 
+
+![image](https://github.com/user-attachments/assets/15cb62ff-a120-4e81-9269-8275518a3af2)
+
+--> Source Connectivity of NMOS with VSS (here, it is VGND) verified 
+
+![image](https://github.com/user-attachments/assets/d20f7509-7c80-4166-a573-74834f309055)
+
+
+To see DRC errors
+
+![image](https://github.com/user-attachments/assets/153cd67b-6ba2-4532-812d-421c9f5be623)
+
+
+#### 3. Spice extraction of inverter in magic.
+
+Commands for spice extraction of the custom inverter layout to be used in tkcon window of magic
+
+```tcl
+# Check current directory
+pwd
+
+# Extraction command to extract to .ext format
+extract all
+
+# Before converting ext to spice this command enable the parasitic extraction also
+ext2spice cthresh 0 rthresh 0
+
+# Converting to ext to spice
+ext2spice
+```
+
+Screenshot of tkcon window after running above commands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
