@@ -731,6 +731,30 @@ ext2spice
 
 Screenshot of tkcon window after running above commands
 
+--> To extract the parasitics and characterize the cell design use below commands in tkcon window.
+pwd
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+
+
+![image](https://github.com/user-attachments/assets/30f36941-fdc8-4add-8544-b100e9f2f2e0)
+
+--> The SPICE FILE which is created screenshot of that is given below:- 
+
+It will find inside the given path ,
+
+`Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign`
+
+![image](https://github.com/user-attachments/assets/8f926fdf-12fd-4c34-8303-5499ac4f370d)
+
+#### 4. Editing the spice model file for analysis through simulation.
+
+Measuring unit distance in layout grid
+
+
+
+
 
 
 
