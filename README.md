@@ -862,8 +862,39 @@ Rise\ Cell\ Delay = Time\ taken\ for\ output\ to\ rise\ to\ 50\% - Time\ taken\ 
 
 50% Screenshots
 
+![image](https://github.com/user-attachments/assets/f4f4b402-cef5-4376-896d-07e416bf82ca)
+
+![image](https://github.com/user-attachments/assets/8b0faa90-7e60-47e0-aa1e-9c98aafd7cfb)
 
 
+```math
+Rise\ Cell\ Delay = 2.21144 - 2.15008 = 0.06136\ ns = 61.36\ ps
+```
+
+
+
+Fall Cell Delay Calculation
+
+```math
+Fall\ Cell\ Delay = Time\ taken\ for\ output\ to\ fall\ to\ 50\% - Time\ taken\ for\ input\ to\ rise\ to\ 50\%
+```
+```math
+50\%\ of\ 3.3\ V = 1.65\ V
+```
+
+50% Screenshots
+
+![image](https://github.com/user-attachments/assets/63fb1a0a-54a0-4545-9b98-822a54368245)
+
+![image](https://github.com/user-attachments/assets/7114dcaa-3ebc-4487-a463-dd2444f3fd83)
+
+
+```math
+Fall\ Cell\ Delay = 4.07 - 4.05 = 0.02\ ns = 20\ ps
+```
+
+
+#### 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
 
 
 
