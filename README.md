@@ -787,6 +787,82 @@ screenshot of generated plot
 
 
 
+Time Calculation for rise transition 
+
+```math
+Rise\ transition\ time = Time\ taken\ for\ output\ to\ rise\ to\ 80\% - Time\ taken\ for\ output\ to\ rise\ to\ 20\%
+```
+
+
+
+```math
+20\%\ of\ output = 660\ mV
+```
+
+80 % screenshot
+```math
+80\%\ of\ output = 2.64\ V
+```
+
+20 % screenshot
+
+![image](https://github.com/user-attachments/assets/70274102-a2f0-4654-a0ee-f6c2eb10762d)
+
+![image](https://github.com/user-attachments/assets/d7c8efbb-1641-42a0-8185-d7bef481a050)
+
+80 % screenshot 
+
+![image](https://github.com/user-attachments/assets/65fab3d5-4d7d-4993-b273-c21026775189)
+
+
+![image](https://github.com/user-attachments/assets/b47a98d6-70ea-4e2a-9a2e-ed50ab29a0b7)
+
+```math
+Rise\ transition\ time = 2.24638 - 2.18242 = 0.06396\ ns = 63.96\ ps
+```
+
+Fall transition time calculation
+
+```math
+Fall\ transition\ time = Time\ taken\ for\ output\ to\ fall\ to\ 20\% - Time\ taken\ for\ output\ to\ fall\ to\ 80\%
+```
+```math
+20\%\ of\ output = 660\ mV
+```
+```math
+80\%\ of\ output = 2.64\ V
+```
+
+20% Screenshots
+
+![image](https://github.com/user-attachments/assets/b4af75d8-c7af-4c95-b1b3-9ccc85944455)
+
+![image](https://github.com/user-attachments/assets/75f28bbb-b103-4633-8553-5c14c25943b8)
+
+80% screenshot 
+
+![image](https://github.com/user-attachments/assets/ac9805e1-4f54-44e7-9881-64d498106b9f)
+
+
+![image](https://github.com/user-attachments/assets/9acba647-7dfb-4076-abe8-297a57b478c6)
+
+
+```math
+Fall\ transition\ time = 4.0955 - 4.0536 = 0.0419\ ns = 41.9\ ps
+```
+
+Rise Cell Delay Calculation
+
+```math
+Rise\ Cell\ Delay = Time\ taken\ for\ output\ to\ rise\ to\ 50\% - Time\ taken\ for\ input\ to\ fall\ to\ 50\%
+```
+```math
+50\%\ of\ 3.3\ V = 1.65\ V
+```
+
+50% Screenshots
+
+
 
 
 
