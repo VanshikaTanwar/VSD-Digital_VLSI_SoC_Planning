@@ -775,11 +775,15 @@ plot y vs time a
 
 Screenshots of ngspice run
 
-![Screenshot from 2024-03-19 14-56-42](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c023ebb0-756f-4707-ae82-a28746f372da)
-![Screenshot from 2024-03-19 14-57-22](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/addefe5e-6a9a-44f2-943a-4a9373ddc56c)
+![image](https://github.com/user-attachments/assets/ee090c10-1740-4c76-b0fd-8ae4f06dd8df)
 
-Screenshot of generated plot
+![image](https://github.com/user-attachments/assets/25f56584-e069-4ba9-b5dc-55a5f2c36402)
 
+
+
+screenshot of generated plot
+
+![image](https://github.com/user-attachments/assets/c480f76f-2cb4-4ab0-845a-5d594cd725bf)
 
 
 
