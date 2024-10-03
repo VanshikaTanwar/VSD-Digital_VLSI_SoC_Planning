@@ -924,19 +924,27 @@ magic -d XR &
 ```
 
 Screenshots of commands run
+![ss1](https://github.com/user-attachments/assets/998c4e32-4e8b-420d-9b55-02113eec273a)
+![ss2](https://github.com/user-attachments/assets/f0cef70a-2397-4ba6-a6a0-26fd4dc0fea7)
 
-![Screenshot from 2024-03-21 22-33-57](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/1b4cf68e-fa83-4d44-9b08-ca2b63ceb471)
-![Screenshot from 2024-03-21 22-34-09](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/1bc14ddb-feb6-4052-bc12-0f018f09c343)
 
 Screenshot of .magicrc file
 
-![Screenshot from 2024-03-21 22-35-58](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/89b46a0f-63b7-445c-bf2b-e6cda16853c7)
+![image](https://github.com/user-attachments/assets/eccff6d1-88bc-436f-b954-423200717c56)
+
+After opening magic , go to file menu > Open > met3.mag > open 
+
+![image](https://github.com/user-attachments/assets/aabe2228-ff77-422c-bb4f-acea87a41fd4)
+
+
+ 
 
 **Incorrectly implemented poly.9 simple rule correction**
 
 Screenshot of poly rules
 
-![Screenshot from 2024-03-21 22-54-49](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9260cf37-5933-44a1-8362-597183644334)
+![image](https://github.com/user-attachments/assets/6b71711d-2d85-47b4-b118-38a3f03adb49)
+
 
 Incorrectly implemented poly.9 rule no drc violation even though spacing < 0.48u
 
