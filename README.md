@@ -1418,14 +1418,55 @@ Comparing to previously noted run values area has increased and worst negative s
 
 ![image](https://github.com/user-attachments/assets/86499007-6953-44d3-a3c4-03e88f620c89)
 
+#### 8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
+
+Now that our custom inverter is properly accepted in synthesis we can now run floorplan using following command
+
+```tcl
+# Now we can run floorplan
+run_floorplan
+```
+
+Screenshots of command run
+
+![image](https://github.com/user-attachments/assets/c10f1e8b-1724-465b-b302-72a080504465)
+
+![image](https://github.com/user-attachments/assets/4c1cab45-b287-4701-9b26-d8302f81ae4b)
+
+Since we are encountering an unexpected, inexplicable error while using the `run_floorplan} command.
+We can utilize the `Floorplan Commands} section in `Desktop/work/tools/openlane_working_dir/openlane/docs/source/OpenLANE_commands.md} as well as information from `Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands/floorplan.tcl} to replace the `run_floorplan} command.
+
+```tcl
+# Follwing commands are alltogather sourced in "run_floorplan" command
+init_floorplan
+place_io
+tap_decap_or
+```
+
+Screenshots of commands run
+
+![image](https://github.com/user-attachments/assets/1ecd561a-35ed-4428-a030-6b0b54a90be3)
 
 
 
+![image](https://github.com/user-attachments/assets/c9647712-71b6-4f34-8eb9-9f1a732d2555)
 
 
+![image](https://github.com/user-attachments/assets/f9eca06f-65ca-4b8b-8be8-8da2a7ff9bda)
 
 
+Now that floorplan step is completed so, we can do placement using following command given below:- 
 
+```tcl
+# Now we are ready to run placement
+run_placement
+```
+
+Screenshots of command run
+
+![image](https://github.com/user-attachments/assets/958df37d-5e4f-4cb0-bc3b-ed18e26fb991)
+
+![image](https://github.com/user-attachments/assets/c4a7ced5-4e06-4f03-8b46-09dc90829d84)
 
 
 
