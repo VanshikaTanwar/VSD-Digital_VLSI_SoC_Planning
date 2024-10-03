@@ -1500,13 +1500,60 @@ Abutment of power pins with other cell from library clearly visible
 
 ![image](https://github.com/user-attachments/assets/c9e560cd-7cfa-4c64-b654-172fd6aea41b)
 
+![image](https://github.com/user-attachments/assets/ef3422d8-57e5-4a93-9a72-bf93ab35bf84)
+![image](https://github.com/user-attachments/assets/a01fbe63-1dd3-4603-b1ec-6b79104f42fb)
+
+
+#### 9. Do Post-Synthesis timing analysis with OpenSTA tool.
+
+Since we are having 0 wns after improved timing run we are going to do timing analysis on initial run of synthesis which has lots of violations and no parameters were added to improve timing
+
+Commands to invoke the OpenLANE flow include new lef and perform synthesis 
+
+```bash
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+```
+```tcl
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Adiitional commands to include newly added lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+```
+
+Commands run final screenshot
+
+![image](https://github.com/user-attachments/assets/be635717-a3a7-4e54-895b-adfb425744bc)
+
+![image](https://github.com/user-attachments/assets/14ac77b9-3eb8-4578-b48f-d4d9ed8b5dcf)
+
+![image](https://github.com/user-attachments/assets/2f103c06-3e7a-4199-9229-9b0823170aa0)
+
+![image](https://github.com/user-attachments/assets/dc7ce8b3-2932-4cf8-bc88-b510adf07804)
+
+Newly created `pre_sta.conf` for STA analysis in `openlane` directory
 
 
 
-
-
-
-
+Newly created `my_base.sdc` for STA analysis in `openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc`
 
 
 
