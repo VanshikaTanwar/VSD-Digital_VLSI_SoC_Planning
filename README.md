@@ -1009,7 +1009,8 @@ Screenshot of magic window with rule implemented
 
 ![screenshot of magic window with rule implemented ss1](https://github.com/user-attachments/assets/6b93bcd6-030e-42db-aab9-0d36ee38397c)
 
-![screenshot of magic window ss2](https://github.com/user-attachments/assets/3ab84297-b414-450e-afd9-cbd703bb1e39)
+![image](https://github.com/user-attachments/assets/e9abfabf-f099-4582-adfe-ef6a37bcb21f)
+
 
 **Incorrectly implemented difftap.2 simple rule correction**
 
