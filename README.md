@@ -622,10 +622,8 @@ exit
 exit
 ```
 
-
-## Task 3 - Design library cell using Magic Layout and ngspice characterization
-Inverrter Characterization using SKY130 Model File 
-
+# DAY 3 ( Design library cell using Magic Layout and ngspice characterization )
+Inverrter Characterization using SKY130 Model File
 
 
 ### Theory
@@ -637,7 +635,7 @@ Expand or Collapse
 
 </details>
 
-
+## Task 3
 Section 3 Tasks :- 
 1. Clone custom inverter standard cell design from github repository: [Standard cell design and characterization using OpenLANE flow](https://github.com/nickson-jose/vsdstdcelldesign).
 2. Load the custom inverter layout in magic and explore.
@@ -1091,6 +1089,93 @@ Screenshot of magic window with rule implemented
 
 ![image](https://github.com/user-attachments/assets/3806de73-f419-4aec-b06a-97d1603c99b1)
 
+
+
+
+# DAY 4 ( Pre- Layout Timing Analysis and importance of good clock Tree )
+
+
+### Theory
+
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
+
+</details>
+
+
+## Task 4
+
+1. To Fix up small DRC errors and to verify the design is ready to be inserted into our flow.
+2. Save the finalized layout with custom name and open it.
+3. Generate lef from the layout.
+4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory.
+5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow.
+6. Run openlane flow synthesis with newly inserted custom inverter cell.
+7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
+8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
+9. Do Post-Synthesis timing analysis with OpenSTA tool.
+10. Make timing ECO fixes to remove all violations.
+11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+12. Post-CTS OpenROAD timing analysis.
+13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'.
+
+
+
+#### 1. To Fix up small DRC errors and to verify the design is ready to be inserted into our flow.
+
+
+There are some Conditions which need to be verified before proceeding further using the custom design cell layout:
+
+    First condition: The standard cell's input and output ports should be located where       the vertical and horizontal tracks meet.
+    Second requirement: The standard cell's width must be an odd multiple of the              horizontal track pitch.
+    Third requirement: The standard cell's height need to be an even multiple of the          vertical track pitch.
+
+Commands to run for opening the custom inverter layout are given below :- 
+
+```bash
+# Change directory to vsdstdcelldesign
+cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+
+# Command to open custom inverter layout in magic
+magic -T sky130A.tech sky130_inv.mag &
+```
+The inverter layout after opening in magic looks like this :- 
+
+![image](https://github.com/user-attachments/assets/477ad5e8-85df-4f66-bb7d-665a3935f7d0)
+
+![image](https://github.com/user-attachments/assets/12aa7490-798a-4217-90a5-16bac11a7f6a)
+
+
+
+Screenshot of tracks.info of sky130_fd_sc_hd
+
+Tracks are basically nothing it is just the thing which is used during the routing stage .
+It shows the traces. 
+x is horizontal track and Y is vertical track .
+
+![image](https://github.com/user-attachments/assets/e290b95f-64a3-427b-bbf7-5897a021bc34)
+
+![image](https://github.com/user-attachments/assets/4cf09d35-9883-4434-ba2d-2fe926a4b109)
+
+Commands to run in tkcon window of magic to set grid as tracks of locali layer
+
+```tcl
+# Get syntax for grid command
+help grid
+
+# Set grid values accordingly
+grid 0.46um 0.34um 0.23um 0.17um
+```
+
+Screenshot of commands run
+
+![image](https://github.com/user-attachments/assets/5659a625-ef3f-40e1-b6eb-1a482724063d)
+
+--> First Condition Verufied 
+
+![image](https://github.com/user-attachments/assets/14e13564-a097-43c5-a1a2-18f22fb4addb)
 
 
 
