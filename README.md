@@ -937,6 +937,10 @@ After opening magic , go to file menu > Open > met3.mag > open
 ![image](https://github.com/user-attachments/assets/aabe2228-ff77-422c-bb4f-acea87a41fd4)
 
 
+![image](https://github.com/user-attachments/assets/d103760f-a8ef-46dd-9c02-9a8948465dfb)
+
+
+
  
 
 **Incorrectly implemented poly.9 simple rule correction**
