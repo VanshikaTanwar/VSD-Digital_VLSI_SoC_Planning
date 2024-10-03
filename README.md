@@ -1243,6 +1243,7 @@ Command for tkcon window to write lef
 # lef command
 lef write
 ```
+--> when you extract the LEF files, so at that time these ports are basically defined as pins which are used in mag.  
 
 Screenshot of command run
 ![image](https://github.com/user-attachments/assets/49fc3b36-d5f3-499b-89eb-57b0f1fad971)
@@ -1261,13 +1262,14 @@ Commands to copy necessary files to 'picorv32a' design 'src' directory
 
 ```bash
 # Copy lef file
-cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+cp sky130_vsdinv.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 
 # List and check whether it's copied
 ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 
 # Copy lib files
-cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+cp sky130_fd_sc_hd_* /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 
 # List and check whether it's copied
 ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
@@ -1275,7 +1277,39 @@ ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 
 Screenshot of commands run
 
-when you extract the LEF files, so at that time these ports are basically defined as pins which are used in mag. 
+![image](https://github.com/user-attachments/assets/8fd1cf1e-2b3a-49cc-a569-3bb2a7ac1ee2)
+
+check 
+
+![image](https://github.com/user-attachments/assets/5745d680-2282-4d3f-b13a-53fb07129f6e)
+
+copy lib file 
+![image](https://github.com/user-attachments/assets/79171bdd-c029-4cc9-a6bd-d49b77b9ce66)
+
+check 
+![image](https://github.com/user-attachments/assets/58ab563c-ead1-4c90-87b8-a11bea0fc0bc)
+
+
+#### 5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow.
+
+Commands to be added to config.tcl to include our custom cell in the openlane flow
+
+```tcl
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+```
+
+Edited config.tcl to include the added lef and change library to ones we added in src directory
+
+
+![image](https://github.com/user-attachments/assets/91f666e2-05f7-4ae7-92f6-10fdcea68028)
+
+
+
 
 
 
