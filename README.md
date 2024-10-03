@@ -941,6 +941,9 @@ After opening magic , go to file menu > Open > met3.mag > open
 
 ![image](https://github.com/user-attachments/assets/fa79aa2a-a62c-45bc-ad89-5af6a014275d)
 
+![image](https://github.com/user-attachments/assets/8547e5fd-7455-408f-a3ca-91044ab7b811)
+
+
 
 
 
