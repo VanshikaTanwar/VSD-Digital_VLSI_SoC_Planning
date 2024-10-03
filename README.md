@@ -1309,12 +1309,114 @@ Edited config.tcl to include the added lef and change library to ones we added i
 ![image](https://github.com/user-attachments/assets/91f666e2-05f7-4ae7-92f6-10fdcea68028)
 
 
+#### 6. Run openlane flow synthesis with newly inserted custom inverter cell.
+
+Commands to invoke the OpenLANE flow include new lef and perform synthesis 
+
+```bash
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+```
+```tcl
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Adiitional commands to include newly added lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+```
+
+Screenshots of commands run
+
+![image](https://github.com/user-attachments/assets/ce66597f-0d8f-4b39-9ed5-ae50889d61a5)
+
+![image](https://github.com/user-attachments/assets/5091d9c6-807d-4e56-9970-a82b86e0b915)
+
+
+![image](https://github.com/user-attachments/assets/1b50e811-045d-45f2-9e99-7d6ba64110f2)
+
+#### 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
+
+Noting down current design values generated before modifying parameters to improve timing
+![image](https://github.com/user-attachments/assets/efef72c3-a276-4304-8840-7cccdea1a14a)
+
+![image](https://github.com/user-attachments/assets/20a01558-674a-4f48-88dd-08a445d3f0f6)
 
 
 
+Commands to view and change parameters to improve timing and run synthesis
+
+```tcl
+# Now once again we have to prep design so as to update variables
+prep -design picorv32a -tag 03-10_21-51 -overwrite 
+
+# Addiitional commands to include newly added lef to openlane flow merged.lef
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to display current value of variable SYNTH_STRATEGY
+echo $::env(SYNTH_STRATEGY)
+
+# Command to set new value for SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+# Command to display current value of variable SYNTH_BUFFERING to check whether it's enabled
+echo $::env(SYNTH_BUFFERING)
+
+# Command to display current value of variable SYNTH_SIZING
+echo $::env(SYNTH_SIZING)
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+echo $::env(SYNTH_DRIVING_CELL)
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+```
+
+After running the above mentioned command , 
+
+![image](https://github.com/user-attachments/assets/7250f997-e4cd-46c4-8287-6800baf4fd2e)
+
+![image](https://github.com/user-attachments/assets/ab4943c8-e6f5-4ba9-a345-79244a435e84)
+![image](https://github.com/user-attachments/assets/6111b046-ee36-4926-8103-ddde7aec1367)
+
+![image](https://github.com/user-attachments/assets/d08178ad-9c41-44d0-8091-ed4f700681f3)
+
+![image](https://github.com/user-attachments/assets/bd54f146-fba0-4705-abb9-329bbe41fb6c)
+
+![image](https://github.com/user-attachments/assets/5c39e576-89f5-4336-a95d-aefd8fd4c7c0)
 
 
 
+Comparing to previously noted run values area has increased and worst negative slack has become 0
+
+![image](https://github.com/user-attachments/assets/1187c6b5-e03e-4345-9e1d-29959da0a658)
+
+
+![image](https://github.com/user-attachments/assets/b364a93a-8514-4be7-b6ca-d37f46a733c1)
+
+--> Screenshot of merged.lef in `tmp` directory with our custom inverter as macro
+
+
+"/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-10_21-51/tmp/merged.lef"
+
+![image](https://github.com/user-attachments/assets/86499007-6953-44d3-a3c4-03e88f620c89)
 
 
 
