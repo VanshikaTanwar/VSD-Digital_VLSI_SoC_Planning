@@ -1468,8 +1468,37 @@ Screenshots of command run
 
 ![image](https://github.com/user-attachments/assets/c4a7ced5-4e06-4f03-8b46-09dc90829d84)
 
+Commands to load placement def in magic in another terminal
+
+```bash
+# Change directory to path containing generated placement def
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03/results/placement/
+
+# Command to load the placement def in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+
+Screenshot of placement def in magic
+
+![image](https://github.com/user-attachments/assets/9cf5e52b-09f9-40a9-a20b-2820780416da)
+
+![image](https://github.com/user-attachments/assets/ab898169-3aaa-4c40-a61b-e25b4289fe85)
+
+Screenshot of custom inverter inserted in placement def with proper abutment
+
+![image](https://github.com/user-attachments/assets/40ed3f93-7b50-4e82-abae-7ab58ff904c1)
 
 
+Command to run in tkcon window to view internal layers of cells
+
+```tcl
+# Command to view internal connectivity layers
+expand
+```
+
+Abutment of power pins with other cell from library clearly visible
+
+![image](https://github.com/user-attachments/assets/c9e560cd-7cfa-4c64-b654-172fd6aea41b)
 
 
 
