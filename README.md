@@ -1185,9 +1185,97 @@ Screenshot of commands run
 
                Width of standard cell= 1.38um = 0.46 * 3
 
+--> Third Condition Verified 
+
+      As, Vertical Track Pitch is given as = 0.34um
+
+![image](https://github.com/user-attachments/assets/fe1cb4ab-7696-4baf-a099-447a63f1743d)
+
+
+![image](https://github.com/user-attachments/assets/ba4b8d96-24c0-4320-8d44-1e80e9f1807e)
 
 
 
+
+              Height of standard cell= 2.72 um = 0.34 * 8
+
+
+#### 2. Save the finalized layout with custom name and open it.
+
+Command to run in tkcon window to save the layout with custom name
+
+```tcl
+# Command to save as
+save sky130_vsdinv.mag
+exit
+```
+
+Image of Saved Layout
+![image](https://github.com/user-attachments/assets/d72517f4-d46e-4dd1-b9e8-024dd6e7f2d2)
+
+we can see in the directory that our file becomes saved , as it is listed now in the respective directory 
+
+![image](https://github.com/user-attachments/assets/0e8a0a9c-808e-4c91-a6ce-729cd6745480)
+
+
+
+ 
+Command to open the newly saved layout
+
+```bash
+# Command to open saved custom inverter layout in magic
+magic -T sky130A.tech sky130_vsdinv.mag &
+```
+
+Screenshot of newly saved layout
+
+![image](https://github.com/user-attachments/assets/af6ca108-fece-4fb2-9661-ac0c9964cafd)
+
+
+
+
+
+#### 3. To Generate lef from the layout.
+
+Command for tkcon window to write lef
+
+```tcl
+# lef command
+lef write
+```
+
+Screenshot of command run
+![image](https://github.com/user-attachments/assets/49fc3b36-d5f3-499b-89eb-57b0f1fad971)
+
+Lef file has been created in the same directory with same name as shown below:-
+
+![image](https://github.com/user-attachments/assets/b86de9ee-392f-4b6b-bc6b-0bb906ca138f)
+
+Screenshot of newly created lef file
+
+![image](https://github.com/user-attachments/assets/4f0537ca-6137-4e82-9c2a-6be093723802)
+
+#### 4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory.
+
+Commands to copy necessary files to 'picorv32a' design 'src' directory
+
+```bash
+# Copy lef file
+cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+# List and check whether it's copied
+ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+# Copy lib files
+cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+# List and check whether it's copied
+ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+```
+
+Screenshot of commands run
+
+when you extract the LEF files, so at that time these ports are basically defined as pins which are used in mag. 
 
 
 
