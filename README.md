@@ -1173,9 +1173,18 @@ Screenshot of commands run
 
 ![image](https://github.com/user-attachments/assets/5659a625-ef3f-40e1-b6eb-1a482724063d)
 
---> First Condition Verufied 
+--> First Condition Verified 
 
 ![image](https://github.com/user-attachments/assets/14e13564-a097-43c5-a1a2-18f22fb4addb)
+
+--> Second Condition Verified 
+
+      As, Horizontal Track Pitch is given as = 0.46um
+
+![image](https://github.com/user-attachments/assets/baf9f2b5-871a-4740-93f0-5b53f256c2b2)
+
+               Width of standard cell= 1.38um = 0.46 * 3
+
 
 
 
