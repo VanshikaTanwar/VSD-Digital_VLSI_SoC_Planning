@@ -1551,11 +1551,61 @@ Commands run final screenshot
 
 Newly created `pre_sta.conf` for STA analysis in `openlane` directory
 
+![image](https://github.com/user-attachments/assets/9bc0fb8c-44ae-4d24-a292-e9b035058899)
+![image](https://github.com/user-attachments/assets/0bd79b37-acbe-422b-a1ac-164d320d4624)
 
 
 Newly created `my_base.sdc` for STA analysis in `openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc`
 
+![image](https://github.com/user-attachments/assets/72efff8f-cfee-4cfc-b5b2-fc99a0a3235d)
 
+Commands to run STA in another terminal
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
+
+Screenshots of commands run
+
+![image](https://github.com/user-attachments/assets/4e4fe61e-70e4-4014-a559-2cc6ea009eb2)
+
+![image](https://github.com/user-attachments/assets/e61135ec-eebd-4c03-84f3-fff0c1ccbd96)
+
+![image](https://github.com/user-attachments/assets/64471a18-3f94-482c-9a85-164ecd966cc8)
+
+![image](https://github.com/user-attachments/assets/ad9915eb-aa19-4e90-bf71-7d6e50c73d41)
+
+
+Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
+
+Commands to include new lef and perform synthesis 
+
+```tcl
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a -tag 25-03_18-52 -overwrite
+
+# Adiitional commands to include newly added lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Command to set new value for SYNTH_MAX_FANOUT
+set ::env(SYNTH_MAX_FANOUT) 4
+
+# Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+echo $::env(SYNTH_DRIVING_CELL)
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+```
+
+Commands run final screenshot
 
 
 
