@@ -977,13 +977,6 @@ in magic, type these command to load poly
 ![image](https://github.com/user-attachments/assets/12ac0b63-9ff2-4deb-87e3-301e9cf9d159)
 
 
-
-
-
-
-![Screenshot from 2024-03-21 22-54-19](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/acfbcf69-020e-4b62-96bd-b7630aa74ef0)
-![Screenshot from 2024-03-21 23-54-11](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a05bd29a-b181-4e26-826a-d32f12696b2c)
-
 New commands inserted in sky130A.tech file to update drc
 
 ![Screenshot from 2024-03-21 23-58-44](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/dc30df54-3282-42f0-8e7d-fc4d8877ed64)
