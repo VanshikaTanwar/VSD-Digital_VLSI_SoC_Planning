@@ -976,11 +976,21 @@ in magic, type these command to load poly
 
 ![image](https://github.com/user-attachments/assets/12ac0b63-9ff2-4deb-87e3-301e9cf9d159)
 
+![poly](https://github.com/user-attachments/assets/d8033535-4001-450e-92be-336082c19024)
+
+
+![poly 9 magic ](https://github.com/user-attachments/assets/0f3230a4-5769-4c77-b789-ef497491d3f9)
+
+
 
 New commands inserted in sky130A.tech file to update drc
 
-![Screenshot from 2024-03-21 23-58-44](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/dc30df54-3282-42f0-8e7d-fc4d8877ed64)
-![Screenshot from 2024-03-21 23-09-50](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d112ca07-854c-41e7-8822-c269e21defea)
+
+![poly edit](https://github.com/user-attachments/assets/126758e8-4153-4723-9ec4-c9b1154ff785)
+
+![uhr edit ](https://github.com/user-attachments/assets/e99d1cdf-cf31-44d8-acf9-15544b95f0f7)
+
+
 
 Commands to run in tkcon window
 
@@ -997,22 +1007,29 @@ drc why
 
 Screenshot of magic window with rule implemented
 
-![Screenshot from 2024-03-21 23-13-11](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b18e8e07-ef0f-40fb-9b6d-8aae878a23c6)
-![Screenshot from 2024-03-22 00-00-40](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d5afe8d8-691b-485d-a89a-8f901e18b56e)
+![screenshot of magic window with rule implemented ss1](https://github.com/user-attachments/assets/6b93bcd6-030e-42db-aab9-0d36ee38397c)
+
+![screenshot of magic window ss2](https://github.com/user-attachments/assets/3ab84297-b414-450e-afd9-cbd703bb1e39)
 
 **Incorrectly implemented difftap.2 simple rule correction**
 
 Screenshot of difftap rules
 
-![Screenshot from 2024-03-22 00-14-47](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/086b7a66-b60a-470a-b5c0-a5ac938ebec3)
+![image](https://github.com/user-attachments/assets/648db469-deba-4367-ae5e-082797fceb1b)
 
 Incorrectly implemented difftap.2 rule no drc violation even though spacing < 0.42u
 
-![Screenshot from 2024-03-22 00-14-36](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a2d0d739-2df5-4eb5-ab78-c80d366e24e4)
+![image](https://github.com/user-attachments/assets/db4ffa40-4210-48b5-b0cd-849f6d811c3d)
+
+![image](https://github.com/user-attachments/assets/cbd47b52-a36a-41e9-ba69-425df0805d85)
+
+
 
 New commands inserted in sky130A.tech file to update drc
 
-![Screenshot from 2024-03-22 00-26-43](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b5892f9b-9c5d-4b1b-baa2-6fe45f3965b1)
+![mos varactor edit](https://github.com/user-attachments/assets/56c26036-7047-4d40-bc75-68205ddc3e05)
+
+
 
 Commands to run in tkcon window
 
@@ -1029,22 +1046,29 @@ drc why
 
 Screenshot of magic window with rule implemented
 
-![Screenshot from 2024-03-22 00-29-22](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a3f92160-6701-48fb-b6cf-e4c41dc4a531)
+![image](https://github.com/user-attachments/assets/404af339-0046-42a1-abca-1ceb5b1c5b9f)
 
 **Incorrectly implemented nwell.4 complex rule correction**
 
 Screenshot of nwell rules
 
-![Screenshot from 2024-03-22 00-51-34](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/4ad4901d-0b9a-4339-89e3-7bb3fce2766d)
+![image](https://github.com/user-attachments/assets/192dc854-4a19-44df-8db7-910e0740c985)
 
 Incorrectly implemented nwell.4 rule no drc violation even though no tap present in nwell
 
-![Screenshot from 2024-03-22 00-52-51](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/87da8944-0ad8-455d-97ec-3909eac656c3)
+![image](https://github.com/user-attachments/assets/4040b388-adcb-4604-9416-bf081e156f71)
+
+![image](https://github.com/user-attachments/assets/6d81b47c-f0e3-4f79-a16e-b3addca3c0f0)
+
+
 
 New commands inserted in sky130A.tech file to update drc
+![templayer_edit](https://github.com/user-attachments/assets/b2a5780b-c197-4f3a-a6cf-64c388d412f6)
 
-![Screenshot from 2024-03-22 01-03-42](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/886c6930-6314-4a6f-97d9-6b8423444ac0)
-![Screenshot from 2024-03-22 01-04-04](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d9808e9a-42c2-4421-9b82-2ef65a5a1ad7)
+
+![nwell_edit](https://github.com/user-attachments/assets/75e6e5e9-78a6-40c5-b9f5-49cfbe1b737a)
+
+
 
 Commands to run in tkcon window
 
@@ -1064,7 +1088,7 @@ drc why
 
 Screenshot of magic window with rule implemented
 
-![Screenshot from 2024-03-22 01-10-25](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/49b1004d-f860-4ca7-86f4-4d79784a01cf)
+![image](https://github.com/user-attachments/assets/3806de73-f419-4aec-b06a-97d1603c99b1)
 
 
 
