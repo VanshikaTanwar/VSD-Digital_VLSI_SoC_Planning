@@ -2076,6 +2076,17 @@ report_checks -path_delay min_max -fields {slew trans net cap input_pins} -forma
 
 # Exit to OpenLANE flow
 exit
+
+
+
+
+
+
+* [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+* [Nickson P Jose](https://github.com/nickson-jose), Physical Design Engineer, Intel Corporation.
 ```
 
 Screenshots of commands run and timing report generated
+
+![image](https://github.com/user-attachments/assets/a95b5684-3e78-411e-b6bd-3f38c97784a9)
+
