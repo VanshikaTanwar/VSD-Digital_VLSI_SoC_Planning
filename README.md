@@ -1907,4 +1907,42 @@ run_cts
 gen_pdn 
 ```
 
-Screenshots of power distribution network run
+Screenshots of commands
+![image](https://github.com/user-attachments/assets/135c024a-9a62-4533-bdf9-74a1c7c2e5c4)
+
+
+![image](https://github.com/user-attachments/assets/5d52a97e-8737-4282-b3c6-0e7a2dbefb5a)
+
+![image](https://github.com/user-attachments/assets/0f6eeb4e-0cf5-4b0a-8713-ebf2c5bf778a)
+
+
+
+![image](https://github.com/user-attachments/assets/838f15da-5b4e-47f6-8017-e41f779fff62)
+
+![image](https://github.com/user-attachments/assets/35026f8f-b498-474a-9683-1c7389a133f0)
+
+
+Screenshots of power distribution network run command
+
+![image](https://github.com/user-attachments/assets/445c0127-b0b0-4018-890a-66891fea5140)
+
+![image](https://github.com/user-attachments/assets/be18710e-f523-4de0-a0c3-027a19f3c61e)
+
+
+Commands to load PDN def in magic in another terminal
+
+```bash
+# Change directory to path containing generated PDN def
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03_08-45/tmp/floorplan/
+
+# Command to load the PDN def in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 14-pdn.def &
+```
+
+Screenshots of PDN def in magic 
+
+![image](https://github.com/user-attachments/assets/cbf71c2e-a025-409c-a949-78a145933061)
+
+![image](https://github.com/user-attachments/assets/17cf3ac4-c53d-4b3d-b44a-6b51d2cded66)
+
+
