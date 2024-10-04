@@ -1355,6 +1355,9 @@ Noting down current design values generated before modifying parameters to impro
 
 ![image](https://github.com/user-attachments/assets/20a01558-674a-4f48-88dd-08a445d3f0f6)
 
+![image](https://github.com/user-attachments/assets/60cae338-a19a-43b1-a847-5240fbf0bacf)
+
+
 
 
 Commands to view and change parameters to improve timing and run synthesis
