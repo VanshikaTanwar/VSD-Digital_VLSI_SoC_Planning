@@ -1607,5 +1607,58 @@ run_synthesis
 
 Commands run final screenshot
 
+![image](https://github.com/user-attachments/assets/bc3aa90f-45c3-4ef8-9e1f-76e5b26488d0)|
+![image](https://github.com/user-attachments/assets/5dcae1a6-73ed-45a1-a97b-26bba82cebd9)
+![image](https://github.com/user-attachments/assets/e5fb44bf-4751-4236-af53-3ceca100e388)
+
+Commands to run STA in another terminal
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
+
+Screenshots of commands run
+sta pre_sta.conf
+![image](https://github.com/user-attachments/assets/8c8cee27-84ea-4f02-9342-b4b9643bf8f0)
+
+![image](https://github.com/user-attachments/assets/f97db095-3591-441b-8e6f-5063808144d8)
+
+![image](https://github.com/user-attachments/assets/7afc21f0-cf4d-428b-a291-18737e3e395a)
+
+![image](https://github.com/user-attachments/assets/a16abeac-ed9b-4ef7-9e9b-b852e818501a)
+![image](https://github.com/user-attachments/assets/c12e5bcb-a9ed-4ab0-8502-b47f725d8db9)
+
+
+#### 10. Make timing ECO fixes to remove all violations.
+
+OR gate of drive strength 2 is driving 4 fanouts
+
+
+
+
+
+
+Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+```tcl
+# Reports all the connections to a net
+report_net -connections _11672_
+
+# Checking command syntax
+help replace_cell
+
+# Replacing cell
+replace_cell _14510_ sky130_fd_sc_hd__or3_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+Result - slack reduced
+
 
 
