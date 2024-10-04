@@ -2002,8 +2002,7 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ```
 
 Screenshots of routed def
-
-
+![image](https://github.com/user-attachments/assets/10f6d9b0-6f78-424a-a3e3-b38b3810ee8d)
 
 
 
