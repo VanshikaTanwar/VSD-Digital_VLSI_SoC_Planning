@@ -1116,10 +1116,9 @@ Expand or Collapse
 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
 8. Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
 9. Do Post-Synthesis timing analysis with OpenSTA tool.
-10. Make timing ECO fixes to remove all violations.
-11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
-12. Post-CTS OpenROAD timing analysis.
-13. Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'.
+10. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+
+
 
 
 
@@ -1636,32 +1635,69 @@ sta pre_sta.conf
 ![image](https://github.com/user-attachments/assets/c12e5bcb-a9ed-4ab0-8502-b47f725d8db9)
 
 
-#### 10. Make timing ECO fixes to remove all violations.
+To fix this slack, we use 
 
-OR gate of drive strength 2 is driving 4 fanouts
+```# Now once again we have to prep design so as to update variables
+prep -design picorv32a -tag 24-03_10-03 -overwrite
 
+# Addiitional commands to include newly added lef to openlane flow merged.lef
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
 
+# Command to display current value of variable SYNTH_STRATEGY
+echo $::env(SYNTH_STRATEGY)
 
+# Command to set new value for SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3"
 
+# Command to display current value of variable SYNTH_BUFFERING to check whether it's enabled
+echo $::env(SYNTH_BUFFERING)
 
+# Command to display current value of variable SYNTH_SIZING
+echo $::env(SYNTH_SIZING)
 
-Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
 
-```tcl
-# Reports all the connections to a net
-report_net -connections _11672_
+# Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+echo $::env(SYNTH_DRIVING_CELL)
 
-# Checking command syntax
-help replace_cell
-
-# Replacing cell
-replace_cell _14510_ sky130_fd_sc_hd__or3_4
-
-# Generating custom timing report
-report_checks -fields {net cap slew input_pins} -digits 4
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
 ```
 
-Result - slack reduced
+![image](https://github.com/user-attachments/assets/20cd9caa-6528-4e6c-b91f-68437018065e)
+
+![image](https://github.com/user-attachments/assets/f5dc96cf-4c90-46b5-9ed0-b603d3342e39)
+
+
+
+![image](https://github.com/user-attachments/assets/f5f3cd51-5f1b-4b82-a942-99b3ea8fe328)
+
+Finally, Slack is met .
+
+Commands to run STA in another terminal
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
+
+Screenshots of commands run
+sta pre_sta.conf
+
+![image](https://github.com/user-attachments/assets/e07ad123-7810-4abe-bf4f-a92eedf9a95f)
+
+![image](https://github.com/user-attachments/assets/a52ed81f-60ec-4bd8-941b-4ff048bc4738)
+
+![image](https://github.com/user-attachments/assets/f6da427c-9bd8-4f93-85d9-7bf64a76c8f1)
+
+![image](https://github.com/user-attachments/assets/2036505e-8bc5-41a7-b1c6-a72037978679)
+
+![image](https://github.com/user-attachments/assets/e8d35311-1102-4fc4-a5ea-30dfbd772067)
 
 
 
@@ -1696,20 +1732,7 @@ Result - slack reduced
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+#### 10. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
 
 Now to insert this updated netlist to PnR flow and we can use `write_verilog` and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist
 
@@ -1730,7 +1753,158 @@ ls
 ```
 
 Screenshot of commands run
+
+![image](https://github.com/user-attachments/assets/17002043-c99b-4cdc-a6d4-6c0de4febd51)
+
 ![image](https://github.com/user-attachments/assets/631f6906-b8f1-4e45-af19-1b138572b3ef)
 
+![image](https://github.com/user-attachments/assets/9859a74a-377b-4b22-aba8-213ede79ba1f)
+
+![image](https://github.com/user-attachments/assets/98fa11f6-9480-4c2d-ade5-a4bfac5e79c0)
+
+commands to write verilog 
+
+```tcl
+# Check syntax
+help write_verilog
+
+# Overwriting current synthesis netlist
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/25-03_18-52/results/synthesis/picorv32a.synthesis.v
+
+# Exit from OpenSTA since timing analysis is done
+exit
+```
+
+Screenshot of commands run
 
 
+
+
+![image](https://github.com/user-attachments/assets/7d54397e-c237-42b6-81ac-e261fd928c0b)
+
+We want to follow up on the previous 0 violation design, so we are continuing with the clean design to future stages even though we have confirmed that the netlist is replaced and will be loaded in PnR.
+
+Commands load the design and run necessary stages
+
+```tcl
+# Now once again we have to prep design so as to update variables
+prep -design picorv32a -tag 24-03_10-03 -overwrite
+
+# Addiitional commands to include newly added lef to openlane flow merged.lef
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+
+# Follwing commands are alltogather sourced in "run_floorplan" command
+init_floorplan
+place_io
+tap_decap_or
+
+# Now we are ready to run placement
+run_placement
+
+# Incase getting error
+unset ::env(LIB_CTS)
+
+# With placement done we are now ready to run CTS
+run_cts
+```
+
+Screenshots of commands run
+
+![image](https://github.com/user-attachments/assets/ab88f93b-b902-405f-b385-410dbe8f710d)
+
+![image](https://github.com/user-attachments/assets/2240da25-a7b1-47d9-850a-5a96a9814c3c)
+
+
+![image](https://github.com/user-attachments/assets/cd062460-8a7e-4012-9e09-98303552e077)
+
+![image](https://github.com/user-attachments/assets/05daff2d-c561-4bb2-bb70-bdfa9e630106)
+
+![image](https://github.com/user-attachments/assets/f24bb458-d004-4eeb-ac2d-afa531933b41)
+
+
+# DAY 5 ( Final Steps for RTL2GDS using tritonRoute and OpenSTA )
+
+
+### Theory
+
+<details>
+  <summary>
+Expand or Collapse
+  </summary>
+
+</details>
+
+
+## Task 5
+
+1. Perform generation of Power Distribution Network (PDN) and explore the PDN layout.
+2. Perfrom detailed routing using TritonRoute.
+3. Post-Route parasitic extraction using SPEF extractor.
+4. Post-Route OpenSTA timing analysis with the extracted parasitics of the route.
+
+
+
+#### 1. Perform generation of Power Distribution Network (PDN) and explore the PDN layout.
+
+Commands to perform all necessary stages up until now
+
+```bash
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+```
+```tcl
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Addiitional commands to include newly added lef to openlane flow merged.lef
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_STRATEGY
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+
+# Following commands are alltogather sourced in "run_floorplan" command
+init_floorplan
+place_io
+tap_decap_or
+
+# Now we are ready to run placement
+run_placement
+
+# Incase getting error
+unset ::env(LIB_CTS)
+
+# With placement done we are now ready to run CTS
+run_cts
+
+# Now that CTS is done we can do power distribution network
+gen_pdn 
+```
+
+Screenshots of power distribution network run
