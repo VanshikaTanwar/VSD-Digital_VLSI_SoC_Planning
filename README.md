@@ -949,7 +949,7 @@ Rise\ transition\ time = Time\ taken\ for\ output\ to\ rise\ to\ 80\% - Time\ ta
 ![image](https://github.com/user-attachments/assets/b47a98d6-70ea-4e2a-9a2e-ed50ab29a0b7)
 
 ```math
-Rise\ transition\ time = 2.24638 - 2.18242 = 0.06396\ ns = 63.96\ ps
+Rise\ transition\ time = 2.24673 - 2.18242 = 0.06431\ ns = 64.31\ ps
 ```
 
 Fall transition time calculation
@@ -979,7 +979,7 @@ Fall\ transition\ time = Time\ taken\ for\ output\ to\ fall\ to\ 20\% - Time\ ta
 
 
 ```math
-Fall\ transition\ time = 4.0955 - 4.0536 = 0.0419\ ns = 41.9\ ps
+Fall\ transition\ time = 4.09549 - 4.05313 = 0.04236\ ns = 42.3\ ps
 ```
 
 Rise Cell Delay Calculation
