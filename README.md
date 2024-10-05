@@ -10,7 +10,7 @@ NASSCOM DIGITAL SOC PROGRAM
 - [OpenLane ](#OpenLane)
 - [OpenLane design stages](#OpenLane-design-stages)
 - [Day 1](#Day-1)
-	- [Design Preparation Steps](#Design-Preparation-Steps)
+	- [Design Preparation Steps](# DAY 1 ( Inception of Opensource EDA , OpenLANE and SKY130 PDK ))
 
 
 
