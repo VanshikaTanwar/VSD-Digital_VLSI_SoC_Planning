@@ -999,7 +999,7 @@ Rise\ Cell\ Delay = Time\ taken\ for\ output\ to\ rise\ to\ 50\% - Time\ taken\ 
 
 
 ```math
-Rise\ Cell\ Delay = 2.21144 - 2.15008 = 0.06136\ ns = 61.36\ ps
+Rise\ Cell\ Delay = 2.21119 - 2.15048 = 0.06071\ ns = 60.71\ ps
 ```
 
 
