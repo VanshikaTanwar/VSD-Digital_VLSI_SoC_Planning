@@ -1967,8 +1967,13 @@ run_routing
 
 Screenshots of routing run
 
+![image](https://github.com/user-attachments/assets/f23cd6fc-0e16-40bb-90ad-405bf1f3caef)
+
+
 
 ![image](https://github.com/user-attachments/assets/16be3134-fa05-4cc6-8ab0-22aeb84df06a)
+
+![image](https://github.com/user-attachments/assets/546b3331-9a52-4dee-88ff-349d273bfe7e)
 
 
 
@@ -2001,9 +2006,16 @@ cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-03
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
 
-Screenshots of routed def
-![image](https://github.com/user-attachments/assets/10f6d9b0-6f78-424a-a3e3-b38b3810ee8d)
 
+screenshots of command run 
+
+![image](https://github.com/user-attachments/assets/aa3c61ed-60fd-4220-97d4-8ac3f6113637)
+
+Screenshots of routed def
+![image](https://github.com/user-attachments/assets/2fd96001-b60d-4903-8c8a-f83e62ac5b42)
+
+
+![image](https://github.com/user-attachments/assets/90cfa894-5b65-47f8-b06f-1f1109bdbe31)
 
 
 
