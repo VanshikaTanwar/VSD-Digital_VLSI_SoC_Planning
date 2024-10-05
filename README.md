@@ -686,6 +686,86 @@ Inverrter Characterization using SKY130 Model File
 Expand or Collapse
   </summary>
 
+
+## Timing characterization
+
+Different threshold points of waveform itself .
+Timing threshold points
+So, we use this waveform to define different threshold and to understand the other characteristics .
+
+
+1) Slew_low_rise_thr - low depicts the power which is close to 0 power supply 
+To calculate the slope or slew of this red particular waveform so, we need 2 points for it and defines those 2 points .
+Typical value of slew_low_rise_thr is 20%.
+It could be 30% also.
+
+This is for rising waveform ,similarly it applies for falling waveform .
+
+
+We need these values for calculating the slews of the waveform i.e., slew low rise threshold, slew high rise threshold,slew
+ low fall threshold,slew high fall thr.
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215775529-19399c30-c678-46b3-af79-ded54bbbe9a8.png"></br>
+   fig.77
+</p>
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215782582-5f58cb82-9115-44ed-991e-e7f34f307323.png"></br>
+   fig.79
+</p>
+
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215782792-bffef679-8602-4620-835b-6578b454d734.png"></br>
+   fig.80
+</p>
+
+
+
+In_rise_thr is input waveform 
+For example ,this is input stimulus We have given input to the stimulus and taking the output from the buffer.
+
+In_rise_thr 
+We also have threshold for delay as well.We need some point to calculate the delay .
+In this case we take 50% red waveform that is slew waveform .And one point on output waveform to calculate the delay.
+
+ypical value of inrise threshold is 50%. It's basically input rising waveform.
+
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215783257-8a7ffa60-ac2c-4af0-bf2e-e2d05c2f2a9a.png"></br>
+   fig.81
+</p>
+
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215783520-237aa288-048c-4dfc-9276-b54585990431.png"></br>
+   fig.82
+</p>
+
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215784192-2067973c-cbe4-423a-92ad-46926cccdfc8.png"></br>
+   fig.83
+</p>
+
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215784454-22ce08ad-6008-46f3-8381-e2d9ffd6b620.png"></br>
+   fig.84
+</p>
+
+
+
+
 </details>
 
 ## Task 3
