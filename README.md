@@ -392,6 +392,63 @@ this folder is created inside picorv32a/runs with todays date i.e., 24th Septemb
 Expand or Collapse
   </summary>
 
+Consideration of chip Floorplan
+
+![image](https://github.com/user-attachments/assets/c7491ddc-88a8-4769-8e96-a548cca0c86a)
+
+The height and width of the core and die areas must first be determined in order to calculate the Utilisation Factor and Aspect Ratio.
+
+#### Core
+Core of the chip
+Core is basically consist of different logics . A core is that place where all the digital logics are made or placed in this area like And ,or logic,etc.
+
+#### Die
+Die is basically the area of the chip 
+It is called as that die which is manufactured at the silicon wafer .
+
+The design's netlist will determine the core area's height and width. The number of components needed to carry out the logic will determine it, and the die area's height and width will depend on the height and width of the core area.
+
+
+![image](https://github.com/user-attachments/assets/82fecd85-a554-4c85-a7bd-04242fd45029)
+
+
+2 parameters are important mainly in floorplanning .These are:-
+
+Utilization Factor and Aspect Ratio.
+
+               • Utilisation Factor =  Area occupied by netlist
+   
+                                      __________________________
+                      
+                                          Total area of core
+
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90523478/215687478-3fa3bf8c-2905-4d2f-b5f9-efa36007d737.png"></br>
+   fig.52
+</p>
+
+A utilization Factor of 1 signifies 100% utilization leaving no space for extra cells/logics such as to add buffer. However, practically , we only use utilization factor approximately 50%-60% or 0.5-0.6.
+
+   • Aspect Ratio
+   • Aspect ratio = Height/Width 
+
+* Height of the core , 
+* width of the core ,
+
+Aspect ratio 1 means that the chip is squared shaped. Any value which is another than 1 means it implies the rectangular shaped. It also means that when anything comes other than  1 then, the core is 50% utilized and the remaining area or extra amount of area is used to place the additional cells.
+
+--> Core utilization =area of netlist/total area of cell
+
+Here, FP_CORE_UTIL=50 means floorplan core utilization is 50%.
+
+Aspect ratio is 1.
+
+
+Note:- ## The Utilisation Factor should never be "1" for a good floor plan since at that point, there won't be any room for further reasoning to be added if necessary, and the floor plan will be considered poor.
+
+
+
 </details>
 
 
