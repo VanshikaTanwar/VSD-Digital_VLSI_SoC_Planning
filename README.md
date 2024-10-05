@@ -1,7 +1,7 @@
 # VSD-Digital_VLSI_SoC_Planning
-NASSCOM DIGITAL SOC PROGRAM
-Comments
--->
+NASSCOM DIGITAL SOC PROGRAM-In this workshop, we will dive into the process of creating an Application Specific Integrated Circuit (ASIC), from the Register Transfer Level (RTL) to the Graphical Data System (GDS). 
+
+
 
 > A two-week workshop on digital VLSI SoC design and planning, covering the entire RTL2GDSII flow, is being offered by VSD in association with NASSCOM.
 
