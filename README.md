@@ -2057,7 +2057,7 @@ report_checks -path_delay min_max -fields {slew trans net cap input_pins} -forma
 # Exit to OpenLANE flow
 exit
 
-
+```
 
 
 Screenshots of commmand run and timing report generated
