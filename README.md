@@ -1474,7 +1474,7 @@ Commands to load placement def in magic in another terminal
 
 ```bash
 # Change directory to path containing generated placement def
-cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03/results/placement/
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-10_21-51/results/placement/
 
 # Command to load the placement def in magic tool
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
@@ -1588,7 +1588,7 @@ Commands to include new lef and perform synthesis
 
 ```tcl
 # Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
-prep -design picorv32a -tag 25-03_18-52 -overwrite
+prep -design picorv32a -tag 03-10_23-15 -overwrite
 
 # Adiitional commands to include newly added lef to openlane flow
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
@@ -1638,7 +1638,7 @@ sta pre_sta.conf
 To fix this slack, we use 
 
 ```# Now once again we have to prep design so as to update variables
-prep -design picorv32a -tag 24-03_10-03 -overwrite
+prep -design picorv32a -tag 03-10_23-15 -overwrite
 
 # Addiitional commands to include newly added lef to openlane flow merged.lef
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
@@ -1705,33 +1705,6 @@ sta pre_sta.conf
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #### 10. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
 
 Now to insert this updated netlist to PnR flow and we can use `write_verilog` and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist
@@ -1740,7 +1713,7 @@ Commands to make copy of netlist
 
 ```bash
 # Change from home directory to synthesis results directory
-cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/25-03_18-52/results/synthesis/
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-10_23-15/results/synthesis/
 
 # List contents of the directory
 ls
@@ -1769,7 +1742,7 @@ commands to write verilog
 help write_verilog
 
 # Overwriting current synthesis netlist
-write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/25-03_18-52/results/synthesis/picorv32a.synthesis.v
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/03-10_23-15/results/synthesis/picorv32a.synthesis.v
 
 # Exit from OpenSTA since timing analysis is done
 exit
@@ -1788,7 +1761,7 @@ Commands load the design and run necessary stages
 
 ```tcl
 # Now once again we have to prep design so as to update variables
-prep -design picorv32a -tag 24-03_10-03 -overwrite
+prep -design picorv32a -tag 04-10_15-51 -overwrite
 
 # Addiitional commands to include newly added lef to openlane flow merged.lef
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
@@ -2113,3 +2086,7 @@ Screenshots of commmand run and timing report generated
 * [R. Timothy Edwards](https://github.com/RTimothyEdwards), Senior Vice President of Analog and Design, efabless Corporation.
 
 
+## Author
+
+
+- [Vanshika Tanwar](https://github.com/VanshikaTanwar), Bachelor of Technology in Electronics & Communication Engineering,Dronacharya Group of Institutions,Greater Noida, U.P.
