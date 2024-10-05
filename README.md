@@ -1994,6 +1994,7 @@ Screenshots of routing run
 
 
 
+
 Commands to load routed def in magic in another terminal
 
 ```bash
@@ -2013,16 +2014,21 @@ Screenshots of routed def
 
 
 
+![image](https://github.com/user-attachments/assets/2eed353c-57fa-4061-b8e0-7315320abd55)
+
+
+![image](https://github.com/user-attachments/assets/0c76d338-568c-4ba4-acb1-4436e7eb4bfd)
+
+
+![image](https://github.com/user-attachments/assets/27c35e7d-3559-4f16-9e19-d87700b22033)
 
 
 
+![image](https://github.com/user-attachments/assets/aabaf173-b73b-4316-b10b-4f20ddebff60)
 
+Screenshot of fast route guide present in `openlane/designs/picorv32a/runs/04-10_15-51/tmp/routing` directory
 
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/57b8b6af-e662-403c-aee2-e2b3210977fa)
 
 
 
