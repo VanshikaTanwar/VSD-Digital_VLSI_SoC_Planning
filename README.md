@@ -1868,6 +1868,19 @@ Screenshots of commands run
 Expand or Collapse
   </summary>
 
+### PDN (POWER DISTRIBUTION NETWORK)
+
+The PDN in OpenLANE is essential for the correct distribution of power across the chip.
+
+1) The PDN makes sure that there is enough power for all conventional cells and macros.
+2) Throughout the chip, it offers a network of power rails (VDD and VSS), As, in our case, it is VPWR and VGND .
+
+### Routing 
+
+Routing is used to make the physical connection between pins through the use of metal layers. Routing occurs in 2 ways:- Global routing and detailed routing In Global Routing , the region of routing is divided into rectangular grids which is shown as 3D route. In Detailed Routing, To do the physical wiring finger grids and routing grids.
+
+
+
 </details>
 
 
