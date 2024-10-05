@@ -2223,6 +2223,19 @@ Screenshots of commmand run and timing report generated
 ![image](https://github.com/user-attachments/assets/5855ab1b-a8fb-4a01-b4fc-a36ea2742103)
 
 
+## References
+
+- [GitLab/OpenLane workshop](https://gitlab.com/gab13c/openlane-workshop)
+- [The OpenROAD Project/OpenLane](https://github.com/The-OpenROAD-Project/OpenLane)
+- Ahmed Ghazy and Mohamed Shalan, "OpenLane: The Open-Source Digital ASIC Implementation Flow", Article No.21, Workshop on Open-Source EDA Technology (WOSET), 2020. [Paper](https://github.com/woset-workshop/woset-workshop.github.io/blob/master/PDFs/2020/a21.pdf)
+- [YOUTUBE/OpenLane Overview](https://www.youtube.com/watch?v=d0hPdkYg5QI)
+- [GitHUB/openlane_build_script](https://github.com/nickson-jose/openlane_build_script)
+- [GitLab/OpenLANE-Sky130-Physical-Design-Workshop](https://github.com/ripudamank2/OpenLANE-Sky130-Physical-Design-Workshop)
+-[Udemy course/VSD-a-complete-guide-to-install-open-source-eda-tools)
+
+
+
+
 
 
 # Acknowledgements
