@@ -1,18 +1,13 @@
 # VSD-Digital_VLSI_SoC_Planning
 NASSCOM DIGITAL SOC PROGRAM
+Comments
+-->
 
-# Table of Contents
-
-- [Design](#Design)
-- [Open Source Digital ASIC Design](#Open-Source-Digital-ASIC-Design)
-- [Openlane](#Openlane)
-- [OpenLANE ASIC Flow](#OpenLANE-ASIC-Flow)
-- [OpenLane ](#OpenLane)
-- [OpenLane design stages](#OpenLane-design-stages)
-- [Day 1](#Day-1)
-	- [Design Preparation Steps](# DAY 1 ( Inception of Opensource EDA , OpenLANE and SKY130 PDK ))
+> A two-week workshop on digital VLSI SoC design and planning, covering the entire RTL2GDSII flow, is being offered by VSD in association with NASSCOM.
 
 
+
+# DAY 1 ( Inception of Opensource EDA , OpenLANE and SKY130 PDK )
 
 ### Theory
 
@@ -224,7 +219,8 @@ OpenROAD, Magic VLSI Layout Tool, Fault,Yosys,Qflow, KLayout,etc.
 
 </details>
 
-# DAY 1 ( Inception of Opensource EDA , OpenLANE and SKY130 PDK )
+
+## Implementation
 
 As, in my ubuntu setup , vsdflow and other tools are already installed so, i have put its screenshots ....
 as, I have done some old trainings ....thats why its already installed on my ubuntu setup.
