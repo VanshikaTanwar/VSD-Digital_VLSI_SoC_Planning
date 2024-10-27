@@ -2250,6 +2250,9 @@ Screenshots of commmand run and timing report generated
 
 [nasscom certificate.pdf](https://github.com/user-attachments/files/17533879/nasscom.certificate.pdf)
 
+![nasscom certificate image](https://github.com/user-attachments/assets/70ca64dd-55ee-473e-afd0-15361c39f538)
+
+
 
 
 
